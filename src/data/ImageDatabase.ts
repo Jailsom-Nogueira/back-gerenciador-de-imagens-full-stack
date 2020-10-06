@@ -4,13 +4,20 @@ import { BaseDatabase } from './BaseDatabase';
 export class ImageDatabase extends BaseDatabase {
   private static TABLE_NAME = '_images';
 
-  public async getImage(userId: string, imageId: string): Promise<any> {
+  public async getImage(userId: string): Promise<any> {
+    const result = await this.getConnection()
+      .select('*')
+      .from(ImageDatabase.TABLE_NAME)
+      .where({ user_id: userId });
+    return result;
+  }
+
+  public async getImageById(imageId: string, userId: string): Promise<any> {
     const result = await this.getConnection()
       .select('*')
       .from(ImageDatabase.TABLE_NAME)
       .where({ id: imageId })
-      .or.where({ user_id: userId });
-    console.log(imageId);
+      .and.where({ user_id: userId });
     return result;
   }
 
