@@ -17,12 +17,21 @@ export class ImageBusiness {
       throw new Unauthorized('Unauthorized');
     }
 
-    !input.id && (input.id = '');
+    let result = '';
 
-    const result = await new ImageDatabase().getImage(
-      userId,
-      input.id as string,
-    );
+    if (input.id) {
+      result = await new ImageDatabase().getImageById(input.id, userId);
+
+      if (!result.length) {
+        throw new NotFound('Not found');
+      }
+      return result;
+    }
+
+    if (!input.id) {
+      return (result = await new ImageDatabase().getImage(userId));
+    }
+
     if (!result) {
       throw new NotFound('Not found');
     }
