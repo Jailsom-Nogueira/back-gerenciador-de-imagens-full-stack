@@ -1,5 +1,5 @@
 # Fullstack - Gerenciador de imagens. (Back-end)
-Projeto full stack de um gerenciador de imagens - repositório back end
+Projeto full stack de um gerenciador de imagens - repositório back-end
 
 ### API REST: 🛠
 - Typescript;
