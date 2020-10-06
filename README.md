@@ -19,6 +19,7 @@ Projeto full stack de um gerenciador de imagens - repositório back-end
 - Uuid (id)
 - Knex (comunicação DB)
 - Dotenv (tratamento de informações sensíveis da api)
+- Dayjs (Manipulação de datas)
 
 ### Conceitos ❕
 - Arquitetura de software em camadas;
