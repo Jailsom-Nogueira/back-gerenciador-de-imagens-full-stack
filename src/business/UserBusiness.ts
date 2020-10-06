@@ -42,10 +42,13 @@ export class UserBusiness {
 
     const accessToken = this.authenticator.generateToken({
       id,
-      nickname: user.nickname,
     });
 
-    return accessToken;
+    const userData = {
+      accessToken,
+      id,
+    };
+    return userData;
   }
 
   async getUserByEmail(user: LoginInputDTO) {
@@ -77,9 +80,12 @@ export class UserBusiness {
 
     const accessToken = this.authenticator.generateToken({
       id: userFromDB.getId(),
-      nickname: userFromDB.getNickname(),
     });
 
-    return accessToken;
+    const userData = {
+      accessToken: accessToken,
+      id: userFromDB.getId(),
+    };
+    return userData;
   }
 }
