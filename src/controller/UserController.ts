@@ -24,9 +24,9 @@ export class UserController {
         nickname: req.body.nickname,
       };
 
-      const token = await UserController.userBusiness.createUser(input);
+      const userData = await UserController.userBusiness.createUser(input);
 
-      res.status(200).send({ token });
+      res.status(200).send({ userData });
     } catch (error) {
       res.status(400).send({ error: error.message });
     }
@@ -41,9 +41,11 @@ export class UserController {
         password: req.body.password,
       };
 
-      const token = await UserController.userBusiness.getUserByEmail(loginData);
+      const userData = await UserController.userBusiness.getUserByEmail(
+        loginData,
+      );
 
-      res.status(200).send({ token });
+      res.status(200).send({ userData });
     } catch (error) {
       res.status(400).send({ error: error.message });
     }
