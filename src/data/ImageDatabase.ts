@@ -1,4 +1,3 @@
-import { GetImageInputDTO } from '../model/Image';
 import { BaseDatabase } from './BaseDatabase';
 
 export class ImageDatabase extends BaseDatabase {

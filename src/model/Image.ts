@@ -64,6 +64,7 @@ export class Image {
   setCollection() {
     return this.collection;
   }
+
   static toImageModel(image: any): Image {
     return new Image(
       image.id,

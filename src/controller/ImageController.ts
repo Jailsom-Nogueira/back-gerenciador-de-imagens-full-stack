@@ -34,22 +34,6 @@ export class ImageController {
     }
     await BaseDatabase.destroyConnection();
   };
-  // public getImage = async (req: Request, res: Response) => {
-  //   try {
-  //     const input: GetImageInputDTO = {
-  //       id: req.query.id as string,
-  //       subtitle: req.query.subtitle as string,
-  //     };
-
-  //     const result = await new ImageBusiness().getImage(input);
-
-  //     res.status(200).send(result);
-  //   } catch (error) {
-  //     res.status(400).send(error.message);
-  //   }
-
-  //   await BaseDatabase.destroyConnection();
-  // };
 
   async createImage(req: Request, res: Response) {
     try {
@@ -62,12 +46,12 @@ export class ImageController {
         tags: req.body.tags,
         collection: req.body.collection,
       };
-      console.log(input.date);
+
       const imageBusiness = new ImageBusiness();
       await imageBusiness.createImage(input);
 
       res.status(200).send({
-        message: `Image ${input.subtitle} created`,
+        message: `Imagem "${input.subtitle}" criada com sucesso`,
       });
     } catch (error) {
       res.status(400).send({ error: error.message });
