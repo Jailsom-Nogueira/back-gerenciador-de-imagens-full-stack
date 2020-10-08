@@ -19,7 +19,6 @@ export class ImageController {
         subtitle: image.subtitle,
         author: image.author,
         date: image.date,
-        type: image.post_type,
         userId: image.post_userId,
         file: image.file,
         tags: image.tags,
@@ -51,7 +50,7 @@ export class ImageController {
       await imageBusiness.createImage(input);
 
       res.status(200).send({
-        message: `Imagem "${input.subtitle}" criada com sucesso`,
+        message: `Imagem "${input.subtitle}" criada com sucesso.`,
       });
     } catch (error) {
       res.status(400).send({ error: error.message });
