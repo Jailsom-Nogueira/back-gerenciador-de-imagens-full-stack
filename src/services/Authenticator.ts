@@ -24,7 +24,6 @@ export class Authenticator {
     ) as AuthenticationData;
     const result = {
       id: payload.id,
-      nickname: payload.nickname,
     };
     return result;
   }
@@ -32,5 +31,4 @@ export class Authenticator {
 
 interface AuthenticationData {
   id: string;
-  nickname?: string;
 }
