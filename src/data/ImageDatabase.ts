@@ -3,6 +3,16 @@ import { BaseDatabase } from './BaseDatabase';
 export class ImageDatabase extends BaseDatabase {
   private static TABLE_NAME = '_images';
 
+  public async deleteImageById(imageId: string, userId: string): Promise<any> {
+
+    const result = await this.getConnection()
+      .delete('*')
+      .from(ImageDatabase.TABLE_NAME)
+      .where({ id: imageId })
+      .and.where({ user_id: userId });
+    return result;
+  }
+
   public async getImage(userId: string): Promise<any> {
     const result = await this.getConnection()
       .select('*')
