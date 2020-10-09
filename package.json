@@ -1,20 +1,17 @@
 {
-  "name": "lama-template",
+  "name": "my-gallery",
   "version": "1.0.0",
-  "description": "Template para o projeto LAMA",
+  "description": "Projeto full stack",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Running tests...\" && jest",
     "start": "tsc && node ./build/index.js",
-    "build": "tsc",
-    "start1": "ts-node ./src/index.ts",
-    "start:dev": " ts-node-dev ./src/index.ts"
+    "build": "tsc"
   },
   "keywords": [
     "api",
     "labook"
   ],
-  "author": "João Alves",
+  "author": "Jay Nogueira",
   "license": "ISC",
   "dependencies": {
     "@types/bcryptjs": "^2.4.2",
