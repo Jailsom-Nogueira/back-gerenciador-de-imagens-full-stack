@@ -2,9 +2,27 @@ import dayjs from 'dayjs';
 import { Request, Response } from 'express';
 import { ImageBusiness } from '../business/ImageBusiness';
 import { BaseDatabase } from '../data/BaseDatabase';
-import { GetImageInputDTO, ImageInputDTO } from '../model/Image';
+import { DeleteImageInputDTO, GetImageInputDTO, ImageInputDTO } from '../model/Image';
 
 export class ImageController {
+  public deleteImage = async (req: Request, res: Response) => {
+    try {
+      const input: DeleteImageInputDTO = {
+        id: req.query.id as string,
+        token: req.headers.authorization as string,
+      };
+
+      const deleteImgResult = await new ImageBusiness().deleteImage(input);
+
+      res.status(200).send('Imagem apagada com sucesso');
+    } catch (e) {
+      res.status(400).send({
+        message: e.message,
+      });
+    }
+    await BaseDatabase.destroyConnection();
+  };
+
   public getImage = async (req: Request, res: Response) => {
     try {
       const input: GetImageInputDTO = {

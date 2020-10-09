@@ -92,3 +92,8 @@ export interface GetImageInputDTO {
   id?: string;
   token: string;
 }
+
+export interface DeleteImageInputDTO {
+  id: string;
+  token: string;
+}

@@ -1,12 +1,33 @@
 import { IdGenerator } from '../services/IdGenerator';
 import { ImageDatabase } from '../data/ImageDatabase';
 import { Authenticator } from '../services/Authenticator';
-import { GetImageInputDTO, ImageInputDTO } from '../model/Image';
+import { DeleteImageInputDTO, GetImageInputDTO, ImageInputDTO } from '../model/Image';
 import { InvalidParameterError } from '../error/InvalidParameterError';
 import { Unauthorized } from '../error/Unauthorized';
 import { NotFound } from '../error/NotFound';
 
 export class ImageBusiness {
+  public async deleteImage(input: DeleteImageInputDTO) {
+    const authenticator = new Authenticator();
+
+    const authenticationData = authenticator.verify(input.token);
+
+    const userId = authenticationData.id;
+    if (!userId) {
+      throw new Unauthorized('Unauthorized');
+    }
+
+    const checkImage = await new ImageBusiness().getImage(input);
+
+    if (!checkImage.length) {
+      throw new NotFound('Not found');
+    }
+
+    const result = await new ImageDatabase().deleteImageById(input.id, userId);
+
+    return result;
+  }
+
   public async getImage(input: GetImageInputDTO) {
     const authenticator = new Authenticator();
 

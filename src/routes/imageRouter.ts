@@ -7,3 +7,4 @@ const imageController = new ImageController();
 
 imageRouter.post('/createImage', imageController.createImage);
 imageRouter.get('/getImage', imageController.getImage);
+imageRouter.delete('/deleteImage', imageController.deleteImage);
