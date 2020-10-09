@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Running tests...\" && jest",
-    "start": "ts-node ./src/index.ts",
+    "start": "tsc && node ./build/index.js",
+    "build": "tsc",
+    "start1": "ts-node ./src/index.ts",
     "start:dev": " ts-node-dev ./src/index.ts"
   },
   "keywords": [
@@ -33,18 +35,8 @@
     "moment": "^2.27.0",
     "mysql": "^2.18.1",
     "ts-jest": "^26.1.0",
-    "ts-node": "^8.10.2",
     "typescript": "^3.9.6",
     "uuid": "^8.2.0"
   },
-  "devDependencies": {
-    "typescript": "^3.9.2",
-    "ts-node-dev": "^1.0.0-pre.44",
-    "@types/jest": "^25.2.3",
-    "@types/bcryptjs": "^2.4.2",
-    "@types/express": "^4.17.6",
-    "@types/jsonwebtoken": "^8.5.0",
-    "@types/knex": "^0.16.1",
-    "@types/uuid": "^7.0.3"
-  }
+  "devDependencies": {}
 }
