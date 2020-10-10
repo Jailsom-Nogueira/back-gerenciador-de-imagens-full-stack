@@ -15,10 +15,10 @@ app.use(cors());
 app.use('/user', userRouter);
 app.use('/image', imageRouter);
 
-const server = app.listen(3003, () => {
+const server = app.listen(process.env.PORT, () => {
   if (server) {
     const address = server.address() as AddressInfo;
-    console.log(`Servidor rodando em http://localhost:${address.port}`);
+    console.log(`Servidor rodando em ${address.port}`);
   } else {
     console.error(`Falha ao rodar o servidor.`);
   }
