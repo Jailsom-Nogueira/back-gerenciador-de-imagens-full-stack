@@ -1,38 +1,34 @@
 {
   "name": "my-gallery",
   "version": "1.0.0",
-  "description": "Projeto full stack",
+  "description": "projeto-full-stack",
   "main": "index.js",
   "scripts": {
     "start": "tsc && node ./build/index.js",
-    "build": "tsc"
+    "build": "tsc",
+    "test": "test"
   },
-  "keywords": [
-    "api",
-    "labook"
-  ],
   "author": "Jay Nogueira",
   "license": "ISC",
   "dependencies": {
     "@types/bcryptjs": "^2.4.2",
     "@types/cors": "^2.8.7",
+    "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.8",
-    "@types/jest": "^25.2.3",
     "@types/jsonwebtoken": "^8.5.0",
     "@types/knex": "^0.16.1",
+    "@types/mysql": "^2.15.15",
+    "@types/node": "^14.11.8",
     "@types/uuid": "^8.3.0",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dayjs": "^1.9.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "jest": "^26.5.2",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.21.6",
     "mysql": "^2.18.1",
-    "ts-jest": "^26.1.0",
-    "typescript": "^3.9.7",
+    "typescript": "^4.0.3",
     "uuid": "^8.3.1"
-  },
-  "devDependencies": {}
+  }
 }
