@@ -1,42 +1,37 @@
 {
-  "name": "lama-template",
+  "name": "my-gallery",
   "version": "1.0.0",
-  "description": "Template para o projeto LAMA",
+  "description": "projeto-full-stack",
   "main": "index.js",
+  "engines": {
+    "node": "14.12.0"
+  },
   "scripts": {
-    "test": "echo \"Running tests...\" && jest",
     "start": "tsc && node ./build/index.js",
     "build": "tsc",
-    "start1": "ts-node ./src/index.ts",
-    "start:dev": " ts-node-dev ./src/index.ts"
+    "test": "test"
   },
-  "keywords": [
-    "api",
-    "labook"
-  ],
-  "author": "João Alves",
+  "author": "Jay Nogueira",
   "license": "ISC",
   "dependencies": {
     "@types/bcryptjs": "^2.4.2",
     "@types/cors": "^2.8.7",
-    "@types/express": "^4.17.7",
-    "@types/jest": "^25.2.3",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.8",
     "@types/jsonwebtoken": "^8.5.0",
     "@types/knex": "^0.16.1",
-    "@types/uuid": "^8.0.0",
+    "@types/mysql": "^2.15.15",
+    "@types/node": "^14.11.8",
+    "@types/uuid": "^7.0.3",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dayjs": "^1.9.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "jest": "^26.0.1",
     "jsonwebtoken": "^8.5.1",
-    "knex": "^0.21.2",
-    "moment": "^2.27.0",
+    "knex": "^0.21.6",
     "mysql": "^2.18.1",
-    "ts-jest": "^26.1.0",
-    "typescript": "^3.9.6",
-    "uuid": "^8.2.0"
-  },
-  "devDependencies": {}
+    "typescript": "^4.0.3",
+    "uuid": "^7.0.3"
+  }
 }
