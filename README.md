@@ -3,9 +3,9 @@
 # Fullstack - Gerenciador de imagens. (Back-end) 🚪
 Projeto full stack de um gerenciador de imagens - repositório back-end
 
-## Front hospedado na S3 AWS: [LINK](http://my-gallery-turing.s3-website-us-east-1.amazonaws.com/)
-## API REST hospedada na Heroku
-## Banco hospedado na EC2 AWS 
+## - Front hospedado na S3 AWS: [LINK](http://my-gallery-turing.s3-website-us-east-1.amazonaws.com/)
+### - API REST hospedada na Heroku
+### - Banco hospedado na EC2 AWS 
 
 ### API REST: 🛠
 - Typescript;
