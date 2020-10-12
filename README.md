@@ -3,7 +3,9 @@
 # Fullstack - Gerenciador de imagens. (Back-end) 🚪
 Projeto full stack de um gerenciador de imagens - repositório back-end
 
-## [SURGE](http://prickly-activity.surge.sh/)
+## Front hospedado na S3 AWS: [LINK](http://my-gallery-turing.s3-website-us-east-1.amazonaws.com/)
+## API REST hospedada na Heroku
+## Banco hospedado na EC2 AWS 
 
 ### API REST: 🛠
 - Typescript;
@@ -22,6 +24,7 @@ Projeto full stack de um gerenciador de imagens - repositório back-end
 - Knex (comunicação DB)
 - Dotenv (tratamento de informações sensíveis da api)
 - Dayjs (Manipulação de datas)
+- AWS SDK
 
 ### Conceitos ❕
 - Arquitetura de software em camadas;
