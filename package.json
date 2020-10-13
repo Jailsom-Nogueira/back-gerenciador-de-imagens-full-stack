@@ -9,8 +9,7 @@
   },
   "scripts": {
     "start": "tsc && node ./build/index.js",
-    "build": "tsc",
-    "test": "test"
+    "build": "tsc"
   },
   "author": "Jay Nogueira",
   "license": "ISC",
@@ -37,5 +36,6 @@
     "mysql": "^2.18.1",
     "typescript": "^4.0.3",
     "uuid": "^7.0.3"
-  }
+  },
+  "devDependencies": {}
 }
