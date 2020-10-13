@@ -11,6 +11,7 @@ Projeto full stack de um gerenciador de imagens - repositório back-end
 - Typescript;
 - Jest;
 - Nodejs;
+- Heroku
 
 ### Banco de dados: 💾
 - AWS;
@@ -23,8 +24,8 @@ Projeto full stack de um gerenciador de imagens - repositório back-end
 - Uuid (id)
 - Knex (comunicação DB)
 - Dotenv (tratamento de informações sensíveis da api)
-- Dayjs (Manipulação de datas)
-- AWS SDK
+- Dayjs (manipulação de datas)
+- AWS SDK (comunicação com bucket para imagens)
 
 ### Conceitos ❕
 - Arquitetura de software em camadas;
