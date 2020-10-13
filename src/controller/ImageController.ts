@@ -1,10 +1,12 @@
 import dayjs from 'dayjs';
 import { Request, Response } from 'express';
+
 import { ImageBusiness } from '../business/ImageBusiness';
 import { BaseDatabase } from '../data/BaseDatabase';
 import { DeleteImageInputDTO, GetImageInputDTO, ImageInputDTO } from '../model/Image';
 
 export class ImageController {
+  
   public deleteImage = async (req: Request, res: Response) => {
     try {
       const input: DeleteImageInputDTO = {
