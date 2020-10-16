@@ -21,6 +21,12 @@ export class CollectionController {
         date: collection.date,
         collectionId: collection.collection_id,
         imageId: collection.image_id,
+        userId: collection.user_id,
+        subtitle: collection.subtitle,
+        author: collection.author,
+        file: collection.file,
+        tags: collection.tags,
+        collection: collection.collection,
       }));
 
       res.status(200).send(collections);

@@ -7,6 +7,7 @@ import { Unauthorized } from '../error/Unauthorized';
 import { NotFound } from '../error/NotFound';
 
 export class ImageBusiness {
+  
   public async deleteImage(input: DeleteImageInputDTO) {
     const authenticator = new Authenticator();
 

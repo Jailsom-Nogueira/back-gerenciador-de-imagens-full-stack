@@ -8,6 +8,7 @@ import { userRouter } from './routes/userRouter';
 import { imageRouter } from './routes/imageRouter';
 import { fileRouter } from './routes/fileRouter';
 import { collectionRouter } from './routes/collectionRouter';
+import { collectionsImagesRouter } from './routes/collectionsImagesRouter';
 
 dotenv.config();
 const app = express();
@@ -20,7 +21,9 @@ app.use('/user', userRouter);
 app.use('/image', imageRouter);
 app.use('/files', fileRouter);
 app.use('/collection', collectionRouter);
+app.use('/collectionsImages', collectionsImagesRouter);
 
+// Para acesso remoto
 const server = app.listen(process.env.PORT, () => {
   if (server) {
     const address = server.address() as AddressInfo;
@@ -29,6 +32,7 @@ const server = app.listen(process.env.PORT, () => {
     console.error(`Falha ao rodar o servidor.`);
   }
 });
+// Para acesso local
 // const server = app.listen(3003, () => {
 //   if (server) {
 //     const address = server.address() as AddressInfo;

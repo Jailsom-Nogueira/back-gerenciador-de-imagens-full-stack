@@ -47,18 +47,6 @@ export class Collection {
   setFile() {
     return this.file;
   }
-
-  // static toImageModel(image: any): Image {
-  //   return new Image(
-  //     image.id,
-  //     image.subtitle,
-  //     image.author,
-  //     image.date,
-  //     image.file,
-  //     image.tags,
-  //     image.collection,
-  //   );
-  // }
 }
 
 export interface CollectionInputDTO {
@@ -78,3 +66,4 @@ export interface GetCollectionDetailsInputDTO {
   id: string;
   token: string;
 }
+

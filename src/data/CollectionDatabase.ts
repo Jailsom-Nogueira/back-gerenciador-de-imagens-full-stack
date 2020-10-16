@@ -21,6 +21,23 @@ export class CollectionDatabase extends BaseDatabase {
     return result;
   }
 
+  public async getCollectionDetails(collectionId: string) {
+ 
+    try {
+      const result = await this.getConnection().raw(`
+        SELECT _collections_images.*, _images.* 
+        FROM _images 
+        JOIN _collections_images ON _images.id = _collections_images.image_id
+        AND _collections_images.collection_id = '${collectionId}';
+        `);
+
+      return result[0];
+  
+    } catch (error) {
+      throw new Error(error.sqlMessage);
+    }
+  }
+
   public async createCollection(
     id: string,
     title: string,
