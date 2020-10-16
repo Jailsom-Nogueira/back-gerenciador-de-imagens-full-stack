@@ -21,13 +21,9 @@ export class CollectionBusiness {
     if (!userId) {
       throw new Unauthorized('Unauthorized');
     }
+   
+    const collection = await new CollectionDatabase().getCollectionDetails(input.id);
     
-    const collection = await new CollectionDatabase().getCollectionById(input.id, userId);
-
-    if (!collection.length) {
-      throw new NotFound('Not found');
-    }
-
     return collection;
   }
 
