@@ -5,5 +5,5 @@ export const collectionsImagesRouter = express.Router();
 
 const collectionsImagesController = new CollectionsImagesController();
 
-collectionsImagesRouter.put('/addImage', collectionsImagesController.addImage);
+collectionsImagesRouter.post('/addImage', collectionsImagesController.addImage);
 collectionsImagesRouter.delete('/deleteFromCollection', collectionsImagesController.deleteFromCollection);
