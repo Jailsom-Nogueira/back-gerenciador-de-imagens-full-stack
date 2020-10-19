@@ -37,7 +37,6 @@ export class ImageDatabase extends BaseDatabase {
     date: string,
     file: string,
     tags: string,
-    collection: string,
     userId: string,
   ): Promise<void> {
     try {
@@ -49,7 +48,6 @@ export class ImageDatabase extends BaseDatabase {
           date,
           file,
           tags,
-          collection,
           user_id: userId,
         })
         .into(ImageDatabase.TABLE_NAME);
