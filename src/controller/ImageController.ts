@@ -41,8 +41,7 @@ export class ImageController {
         date: image.date,
         userId: image.post_userId,
         file: image.file,
-        tags: image.tags,
-        collection: image.collection,
+        tags: image.tags
       }));
 
       res.status(200).send(images);
@@ -62,8 +61,7 @@ export class ImageController {
         author: req.body.author,
         date: dayjs(req.body.date).format('YYYY-MM-DD'),
         file: req.body.file,
-        tags: req.body.tags,
-        collection: req.body.collection,
+        tags: req.body.tags
       };
 
       const imageBusiness = new ImageBusiness();

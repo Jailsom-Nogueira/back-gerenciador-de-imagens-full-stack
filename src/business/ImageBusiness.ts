@@ -76,8 +76,7 @@ export class ImageBusiness {
       !image.author ||
       !image.date ||
       !image.file ||
-      !image.tags ||
-      !image.collection
+      !image.tags 
     ) {
       throw new InvalidParameterError('Missing one or more Parameters');
     }
@@ -93,7 +92,6 @@ export class ImageBusiness {
       image.date,
       image.file,
       image.tags,
-      image.collection,
       userId,
     );
 
