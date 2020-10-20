@@ -1,10 +1,10 @@
 # Fullstack - Gerenciador de imagens. (Back-end) 🚪
 Projeto full stack de um gerenciador de imagens (Desktop first) - repositório back-end
 
-Objetivos do projeto:
-Demonstrar conhecimentos na implementação de uma aplicação Fullstack ponta a ponta, do zero e de forma autônoma.
+### Objetivos do projeto:
+- demonstrar conhecimentos na implementação de uma aplicação Fullstack ponta a ponta, do zero e de forma autônoma.
 
-Nesta aplicação o usuário poderá:
+### Nesta aplicação o usuário poderá:
 - Criar uma conta;
 - Fazer login para acesso ao app;
 - Subir uma imagem para a sua galeria;
@@ -20,8 +20,8 @@ O que poderia melhorar:
 - Testes.
 
 ## - Front hospedado na S3 AWS: [LINK](http://my-gallery-turing.s3-website-us-east-1.amazonaws.com/)
-### - API REST hospedada na Heroku
-### - Banco hospedado na EC2 AWS 
+- API REST hospedada na Heroku
+- Banco hospedado na EC2 AWS 
 
 ### API REST: 🛠
 - Typescript;
