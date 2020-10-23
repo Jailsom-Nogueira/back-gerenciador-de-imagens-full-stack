@@ -24,14 +24,13 @@ O que poderia melhorar:
 ## - Front hospedado na S3 AWS: [LINK](http://my-gallery-turing.s3-website-us-east-1.amazonaws.com/)
 - API REST hospedada na Heroku
 - Banco hospedado na EC2 AWS 
+- Imagens hospedadas na em um bucket da S3 AWS 
 
 ### API REST: 🛠
 - Typescript;
 - Nodejs;
-- Heroku
 
 ### Banco de dados: 💾
-- AWS;
 - SQL;
 
 ### Bibliotecas: 📚
