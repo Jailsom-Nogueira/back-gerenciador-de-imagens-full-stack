@@ -35,7 +35,6 @@ export class CollectionController {
         message: e.message,
       });
     }
-    await BaseDatabase.destroyConnection();
   };
 
   public getAllCollections = async (req: Request, res: Response) => {
@@ -62,7 +61,6 @@ export class CollectionController {
         message: e.message,
       });
     }
-    await BaseDatabase.destroyConnection();
   };
 
   async createCollection(req: Request, res: Response) {
@@ -84,7 +82,5 @@ export class CollectionController {
     } catch (error) {
       res.status(400).send({ error: error.message });
     }
-
-    await BaseDatabase.destroyConnection();
   }
 }
