@@ -23,7 +23,6 @@ export class CollectionsImagesController {
         message: e.message,
       });
     }
-    await BaseDatabase.destroyConnection();
   };
 
   async addImage(req: Request, res: Response) {
@@ -44,7 +43,5 @@ export class CollectionsImagesController {
     } catch (error) {
       res.status(400).send({ error: error.message });
     }
-
-    await BaseDatabase.destroyConnection();
   }
 }

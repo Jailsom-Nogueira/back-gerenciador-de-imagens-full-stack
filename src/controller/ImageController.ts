@@ -22,7 +22,6 @@ export class ImageController {
         message: e.message,
       });
     }
-    await BaseDatabase.destroyConnection();
   };
 
   public getImage = async (req: Request, res: Response) => {
@@ -50,7 +49,6 @@ export class ImageController {
         message: e.message,
       });
     }
-    await BaseDatabase.destroyConnection();
   };
 
   async createImage(req: Request, res: Response) {
@@ -73,7 +71,5 @@ export class ImageController {
     } catch (error) {
       res.status(400).send({ error: error.message });
     }
-
-    await BaseDatabase.destroyConnection();
   }
 }
